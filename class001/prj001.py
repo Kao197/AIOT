@@ -9,5 +9,7 @@ while True:
     for duty in range(0, 1023,1):#0最亮 1023最暗
         led.duty(duty)
         sleep(0.001)
-
+    for duty in range(1023, 0,-1):
+        led.duty(duty)
+        sleep(0.001)
 
