@@ -1,11 +1,4 @@
 {
-    "python-envs.pythonProjects": [
-        {
-            "path": "",
-            "envManager": "ms-python.python:system",
-            "packageManager": "ms-python.python:pip"
-        }
-    ],
     "python.autoComplete.extraPaths": [
         "c:/Users/Yun-Tse Kao/.vscode-insiders/extensions/rt-thread.rt-thread-micropython-1.0.11/microExamples/code-completion"
     ],

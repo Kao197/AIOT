@@ -1,0 +1,10 @@
+玩家端傳訊息給Domain Name System再給中華電信再給要用的東西的
+公司端傳回中華電信再傳給Domain Name System再傳給玩家端
+傳送時訊息時是在排隊的
+外掛就是修改傳送的訊息
+UDP(User Datagram Protocol)使用者資料報協定,不需要建立連線即可傳送資料,速度較快但不保證資料完整性
+TCP(Transmission Control Protocol)傳輸控制協定,需要建立連線並確認資料完整性,速度較慢但可靠性較高
+AP(Access Point)無線基地台,可以發出無線訊號讓無線裝置連上網路
+STA(Station)連線到無線網路終端裝置,都可以稱為STA
+DDOS(Distributed Denial of Service)分散式阻斷服務攻擊,利用大量電腦同時攻擊目標系統,使其無法正常運作
+API(Application Programming Interface)應用程式介面,提供不同軟體系統之間互相溝通的介面
