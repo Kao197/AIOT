@@ -8,3 +8,4 @@ AP(Access Point)無線基地台,可以發出無線訊號讓無線裝置連上網
 STA(Station)連線到無線網路終端裝置,都可以稱為STA
 DDOS(Distributed Denial of Service)分散式阻斷服務攻擊,利用大量電腦同時攻擊目標系統,使其無法正常運作
 API(Application Programming Interface)應用程式介面,提供不同軟體系統之間互相溝通的介面
+DDNS(Dynamic Domain Name System)動態網域名稱系統,可以讓使用者在IP位址變動時仍能透過固定的網域名稱存取裝置
