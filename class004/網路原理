@@ -9,3 +9,7 @@ STA(Station)連線到無線網路終端裝置,都可以稱為STA
 DDOS(Distributed Denial of Service)分散式阻斷服務攻擊,利用大量電腦同時攻擊目標系統,使其無法正常運作
 API(Application Programming Interface)應用程式介面,提供不同軟體系統之間互相溝通的介面
 DDNS(Dynamic Domain Name System)動態網域名稱系統,可以讓使用者在IP位址變動時仍能透過固定的網域名稱存取裝置
+port是用來區分不同應用程式或服務的數字標識符
+socket是一種網路通訊端點,用來在網路上傳送和接收資料
+utf8是一種字元編碼方式,可以表示世界上大多數的文字和符號
+mqtt是一種輕量級的訊息傳遞協定,適用於物聯網裝置之間的通訊
