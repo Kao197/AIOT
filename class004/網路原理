@@ -12,4 +12,4 @@ DDNS(Dynamic Domain Name System)動態網域名稱系統,可以讓使用者在IP
 port是用來區分不同應用程式或服務的數字標識符
 socket是一種網路通訊端點,用來在網路上傳送和接收資料
 utf8是一種字元編碼方式,可以表示世界上大多數的文字和符號
-mqtt是一種輕量級的訊息傳遞協定,適用於物聯網裝置之間的通訊
+MQTT(Message Queuing Telemetry Transport)訊息佇列遙測傳輸,是一種輕量級的通訊協定,適用於物聯網設備之間的通訊

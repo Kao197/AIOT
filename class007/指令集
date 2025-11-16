@@ -1,0 +1,10 @@
+// .loop_forever() - 讓程式無限循環執行
+// 使用方式：在程式區塊後面加上 .loop_forever()
+// 例如：led.on().loop_forever() 會讓 LED 持續亮著
+
+// 指令沒有 () 就是表示該指令是一個屬性或變數
+// 不會執行任何動作，只是用來讀取或設定值
+// 例如：led.brightness 是讀取亮度值（不需要加括號）
+// try:
+// except:
+// finally:不管有沒有錯誤都會執行
