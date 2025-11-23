@@ -4,11 +4,16 @@ import machine
 import time
 import mcu
 import sys
+from machine import Pin
 
 
 #########################函式與類別定義#########################
-def on_message(topic, msg):
-    msg = msg.decode("utf-8")
+msg = 0
+
+
+def on_message(topic, msg_received):
+    global msg
+    msg = msg_received.decode("utf-8")
     topic = topic.decode("utf-8")
     print(f"my subscribe topic:{topic}, message: {msg}")
 
@@ -34,11 +39,22 @@ finally:  # 不論成功或失敗都會執行
     print("connected MQTT server")
 
 mqClient0.set_callback(on_message)  # 設定接收訊息的時候要執行的函式
-mqClient0.subscribe("HI")  # 訂閱主題
-
+mqClient0.subscribe("hi")  # 訂閱主題
+gpio = mcu.gpio()
+RED = Pin(gpio.D5, Pin.OUT)
+GREEN = Pin(gpio.D6, Pin.OUT)
+BLUE = Pin(gpio.D7, Pin.OUT)
 
 #########################主程式#########################
 while True:
     mqClient0.check_msg()  # 檢查是否有收到訊息，有的話就執行回調函式
     mqClient0.ping()  # 發送ping給伺服器，保持連線
     time.sleep(0.1)  # 延遲0.1秒
+    if msg == "on":
+        RED.value(1)
+        GREEN.value(1)
+        BLUE.value(1)
+    elif msg == "off":
+        RED.value(0)
+        GREEN.value(0)
+        BLUE.value(0)
