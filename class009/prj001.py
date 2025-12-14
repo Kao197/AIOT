@@ -23,23 +23,11 @@ wi = mcu.wifi()
 wi.setup(ap_active=False, sta_active=True)
 if wi.connect("SingularClass", "Singular#1234"):
     print(f"IP = {wi.ip}")
-mq_server = "mqtt.singularinnovation-ai.com"  # mq_server="192.168.68.114"
-mqttClientId = "Kao"  # 大家要不一樣，只能用英文
-mqtt_user_name = "singular"
-mqtt_password = "Singular#1234"
-mqClient0 = MQTTClient(
-    mqttClientId, mq_server, user=mqtt_user_name, password=mqtt_password, keepalive=60
+mqtt_client = mcu.MQTT(
+    "Kao", "mqtt.singularinnovation-ai.com", "singular", "Singular#1234", 60
 )
-
-try:
-    mqClient0.connect()
-except:
-    sys.exit()
-finally:  # 不論成功或失敗都會執行
-    print("connected MQTT server")
-
-mqClient0.set_callback(on_message)  # 設定接收訊息的時候要執行的函式
-mqClient0.subscribe("hi")  # 訂閱主題
+mqtt_client.connect()
+mqtt_client.subscribe("hi", on_message)
 gpio = mcu.gpio()
 light_sensor = ADC(0)
 LED = mcu.LED(gpio.D5, gpio.D6, gpio.D7, pwm=False)
@@ -49,9 +37,7 @@ LED.LED_open(0, 0, 0)
 light_sensor_reading = 0
 
 while True:
-    mqClient0.check_msg()  # 檢查是否有收到訊息，有的話就執行回調函式
-    mqClient0.ping()  # 發送ping給伺服器，保持連線
-    sleep(0.1)  # 延遲0.1秒
+    mqtt_client.check_msg()
     if msg == "on":
         LED.LED_open(1, 1, 1)
     elif msg == "off":
