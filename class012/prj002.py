@@ -16,5 +16,5 @@ mqtt_client.connect()
 #########################主程式#########################
 while True:
     msg = input("Enter publish message:")
-    mqtt_client.publish("hihi", msg)
+    mqtt_client.publish("hi", msg)
     time.sleep(1)
